@@ -4,14 +4,16 @@
 		try {
 			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 
-      window.addEventListener( "onEmbeddedMessagingConversationClosed", () => {
-      
-        console.log( "Inside Conversation End" );
-        embeddedservice_bootstrap.userVerificationAPI.clearSession( true ).then( () => {
-          embeddedservice_bootstrap.utilAPI.removeAllComponents()
-        });
-      
-      } );
+			window.addEventListener( "onEmbeddedMessagingConversationClosed", () => {
+			
+				console.log( "Inside Conversation End" );
+				embeddedservice_bootstrap.userVerificationAPI.clearSession( true ).then( () => {
+    					console.log( 'START::Remove Components' );
+					embeddedservice_bootstrap.utilAPI.removeAllComponents();
+    					console.log( 'END::Remove Components' );
+				} );
+			
+			} );
 
 			embeddedservice_bootstrap.init(
 				'00DWs0000087KS4',
