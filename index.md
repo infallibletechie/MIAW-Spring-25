@@ -1,5 +1,4 @@
 <html>
-	<button onclick="showChat();">Show Chat Windo</button>
 <script type='text/javascript'>
 	function initEmbeddedMessaging() {
 		try {
@@ -28,13 +27,6 @@
 			console.error('Error loading Embedded Messaging: ', err);
 		}
 	};
-
- 	function showChat() {
-
-  		console.log( 'Inside Chat Show' );
-    		embeddedservice_bootstrap.utilAPI.showChatButton();
-
-  	}
 </script>
 <script type='text/javascript' src='https://dws0000087ks4mam-dev-ed.develop.my.site.com/ESWMIAW1737481964843/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 </html>
